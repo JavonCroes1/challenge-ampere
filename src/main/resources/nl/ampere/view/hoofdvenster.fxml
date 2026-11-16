@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane fx:id="hoofdvenster" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
+            fx:controller="nl.ampere.controller.HoofdvensterController">
+    <top>
+        <HBox styleClass="menubalk">
+            <Button fx:id="dashboardKnop" text="Dashboard" onAction="#toonDashboard"/>
+            <Button fx:id="beslissingenKnop" text="Beslissingen" onAction="#toonBeslissingen"/>
+            <Button fx:id="beheerKnop" text="Beheer" onAction="#toonBeheer"/>
+        </HBox>
+    </top>
+</BorderPane>

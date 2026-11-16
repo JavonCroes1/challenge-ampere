@@ -1,0 +1,60 @@
+/* Ampère: het enige CSS-bestand van de app.
+   Iedereen werkt alleen onder het kopje van zijn eigen scherm.
+   De basisregels hieronder alleen in overleg aanpassen. */
+
+/* ===== Basis ===== */
+
+/* Kleuren uit de mock-ups:
+   tekst #24282c, achtergrond pagina #f4f5f7, wit #ffffff,
+   randen #e1e3e7, blauw #335fcf, lichtblauw #e7edfb */
+
+.root {
+    -fx-font-family: "System";
+    -fx-font-size: 14px;
+    -fx-background-color: #f4f5f7;
+}
+
+.label {
+    -fx-text-fill: #24282c;
+}
+
+/* ===== Menubalk (hoofdvenster) ===== */
+
+.menubalk {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e1e3e7;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 10 24;
+    -fx-spacing: 6;
+}
+
+.menubalk .button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 6;
+    -fx-text-fill: #24282c;
+    -fx-padding: 8 14;
+    -fx-cursor: hand;
+}
+
+.menubalk .button:hover {
+    -fx-background-color: #f4f5f7;
+}
+
+/* De knop van het scherm dat nu open is */
+.menubalk .button.actief {
+    -fx-background-color: #e7edfb;
+    -fx-text-fill: #335fcf;
+    -fx-font-weight: bold;
+}
+
+/* ===== Dashboard (Billy) ===== */
+
+
+/* ===== Beslissingen (Naoufal) ===== */
+
+
+/* ===== Beheer (Melik) ===== */
+
+
+/* ===== Inloggen (Daniel) ===== */
+

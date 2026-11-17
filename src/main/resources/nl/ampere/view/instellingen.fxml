@@ -2,8 +2,9 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<!-- Alleen GUI: gegevens, invoercontrole en opslag worden later aangesloten. -->
+<!-- Invoercontrole en bevestiging zijn lokaal; databaseopslag volgt later. -->
 <VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="nl.ampere.controller.InstellingenController"
       styleClass="beheer-kaart, beheer-instellingen" spacing="16">
     <Label text="Limiet van het gebouw" styleClass="beheer-kop"/>
 
@@ -28,12 +29,11 @@
         </VBox>
         <VBox spacing="6">
             <Label text=" "/>
-            <Button fx:id="instellingenOpslaan" text="Opslaan" styleClass="beheer-primair"/>
+            <Button fx:id="instellingenOpslaan" text="Opslaan" onAction="#controleerInstellingen" styleClass="beheer-primair"/>
         </VBox>
     </FlowPane>
 
-    <!-- Mock-up van de bevestiging; later zichtbaar maken na invoercontrole.
-         Zet in Scene Builder visible en managed aan om deze toestand te bekijken. -->
+    <!-- Wordt alleen getoond nadat alle invoer geldig is. -->
     <VBox fx:id="instellingenBevestiging" styleClass="beheer-bevestiging" spacing="12"
           visible="false" managed="false">
         <Label text="Wijzigingen opslaan?" styleClass="beheer-kop"/>
@@ -60,8 +60,10 @@
             <Label fx:id="nieuweVoorrang" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
         </GridPane>
         <HBox spacing="8">
-            <Button fx:id="instellingenBevestigen" text="Bevestigen" styleClass="beheer-primair"/>
-            <Button fx:id="instellingenAnnuleren" text="Annuleren"/>
+            <Button fx:id="instellingenBevestigen" text="Bevestigen" onAction="#bevestigInstellingen" styleClass="beheer-primair"/>
+            <Button fx:id="instellingenAnnuleren" text="Annuleren" onAction="#annuleerInstellingen"/>
         </HBox>
     </VBox>
+    <Label fx:id="instellingenStatus" text="Instellingen bevestigd." styleClass="beheer-succes"
+           visible="false" managed="false"/>
 </VBox>

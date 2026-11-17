@@ -48,8 +48,16 @@
 }
 
 /* ===== Dashboard (Billy) ===== */
+/* De knop van het scherm dat nu open is */
 
+.container{
+    -fx-padding: 5px;
+    -fx-border-radius: 4px;
+}
 
+.statusBar{
+    -fx-background-color: #121212;
+}
 /* ===== Beslissingen (Naoufal) ===== */
 
 

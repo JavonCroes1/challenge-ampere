@@ -55,6 +55,14 @@
 
 /* ===== Beheer (Melik) ===== */
 
+/* Instellingen: velden lopen naar een volgende rij bij minder ruimte. */
+.beheer .beheer-instelling-veld {
+    -fx-pref-width: 180;
+}
+.beheer .beheer-instellingen .beheer-bevestiging {
+    -fx-max-width: Infinity;
+}
+
 /* Alle selectors zijn beperkt tot Meliks scherm en apparaatdialoog. */
 .beheer-scroll, .beheer-scroll > .viewport {
     -fx-background-color: #f4f5f7;

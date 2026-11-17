@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<!-- Alleen GUI: gegevens, invoercontrole en opslag worden later aangesloten. -->
+<VBox xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+      styleClass="beheer-kaart, beheer-instellingen" spacing="16">
+    <Label text="Limiet van het gebouw" styleClass="beheer-kop"/>
+
+    <FlowPane hgap="36" vgap="16" alignment="TOP_LEFT">
+        <VBox styleClass="beheer-instelling-veld" spacing="6">
+            <Label text="Limiet (kW)" labelFor="${limiet}"/>
+            <TextField fx:id="limiet" accessibleText="Limiet in kilowatt"/>
+            <Label fx:id="limietFout" text="Moet groter zijn dan 0"
+                   styleClass="beheer-fout" wrapText="true" visible="false" managed="false"/>
+        </VBox>
+        <VBox styleClass="beheer-instelling-veld" spacing="6">
+            <Label text="Weer aan onder (kW)" labelFor="${weerAan}"/>
+            <TextField fx:id="weerAan" accessibleText="Weer aan onder, in kilowatt"/>
+            <Label fx:id="weerAanFout" text="Moet lager zijn dan de limiet"
+                   styleClass="beheer-fout" wrapText="true" visible="false" managed="false"/>
+        </VBox>
+        <VBox styleClass="beheer-instelling-veld" spacing="6">
+            <Label text="Max. voorrang (uur)" labelFor="${maxVoorrang}"/>
+            <TextField fx:id="maxVoorrang" accessibleText="Maximale voorrangsduur in uren"/>
+            <Label fx:id="voorrangFout" text="Vul minimaal 1 heel uur in"
+                   styleClass="beheer-fout" wrapText="true" visible="false" managed="false"/>
+        </VBox>
+        <VBox spacing="6">
+            <Label text=" "/>
+            <Button fx:id="instellingenOpslaan" text="Opslaan" styleClass="beheer-primair"/>
+        </VBox>
+    </FlowPane>
+
+    <!-- Mock-up van de bevestiging; later zichtbaar maken na invoercontrole.
+         Zet in Scene Builder visible en managed aan om deze toestand te bekijken. -->
+    <VBox fx:id="instellingenBevestiging" styleClass="beheer-bevestiging" spacing="12"
+          visible="false" managed="false">
+        <Label text="Wijzigingen opslaan?" styleClass="beheer-kop"/>
+        <GridPane hgap="16" vgap="8">
+            <columnConstraints>
+                <ColumnConstraints minWidth="160"/>
+                <ColumnConstraints minWidth="80"/>
+                <ColumnConstraints minWidth="24"/>
+                <ColumnConstraints minWidth="80"/>
+            </columnConstraints>
+            <Label text="Oud" styleClass="beheer-subtiel" GridPane.columnIndex="1"/>
+            <Label text="Nieuw" styleClass="beheer-subtiel" GridPane.columnIndex="3"/>
+            <Label text="Limiet (kW)" GridPane.rowIndex="1"/>
+            <Label fx:id="oudeLimiet" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+            <Label text="→" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+            <Label fx:id="nieuweLimiet" GridPane.columnIndex="3" GridPane.rowIndex="1"/>
+            <Label text="Weer aan onder (kW)" GridPane.rowIndex="2"/>
+            <Label fx:id="oudeWeerAan" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <Label text="→" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            <Label fx:id="nieuweWeerAan" GridPane.columnIndex="3" GridPane.rowIndex="2"/>
+            <Label text="Max. voorrang (uur)" GridPane.rowIndex="3"/>
+            <Label fx:id="oudeVoorrang" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+            <Label text="→" GridPane.columnIndex="2" GridPane.rowIndex="3"/>
+            <Label fx:id="nieuweVoorrang" GridPane.columnIndex="3" GridPane.rowIndex="3"/>
+        </GridPane>
+        <HBox spacing="8">
+            <Button fx:id="instellingenBevestigen" text="Bevestigen" styleClass="beheer-primair"/>
+            <Button fx:id="instellingenAnnuleren" text="Annuleren"/>
+        </HBox>
+    </VBox>
+</VBox>

@@ -14,21 +14,7 @@
      <VBox styleClass="beheer-statistiek" spacing="8" HBox.hgrow="ALWAYS" prefWidth="250"><Label text="Limiet overschreden" styleClass="beheer-subtiel"/><Label fx:id="aantalOverschrijdingen" styleClass="beheer-getal"/><Label fx:id="overschrijdingToelichting" styleClass="beheer-subtiel"/></VBox>
     </HBox>
    </VBox>
-   <VBox styleClass="beheer-kaart" spacing="16">
-    <Label text="Limiet van het gebouw" styleClass="beheer-kop"/>
-    <HBox spacing="36" alignment="TOP_LEFT">
-     <VBox spacing="6" prefWidth="180"><Label text="Limiet (kW)" labelFor="$limiet"/><TextField fx:id="limiet"/><Label fx:id="limietFout" styleClass="beheer-fout" wrapText="true" visible="false" managed="false"/></VBox>
-     <VBox spacing="6" prefWidth="180"><Label text="Weer aan onder (kW)" labelFor="$weerAan"/><TextField fx:id="weerAan"/><Label fx:id="weerAanFout" styleClass="beheer-fout" wrapText="true" visible="false" managed="false"/></VBox>
-     <VBox spacing="6" prefWidth="180"><Label text="Max. voorrang (uur)" labelFor="$maxVoorrang"/><TextField fx:id="maxVoorrang"/><Label fx:id="voorrangFout" styleClass="beheer-fout" wrapText="true" visible="false" managed="false"/></VBox>
-     <VBox spacing="6"><Label text=" "/><Button text="Opslaan" onAction="#controleerInstellingen" styleClass="beheer-primair"/></VBox>
-    </HBox>
-    <VBox fx:id="instellingenBevestiging" styleClass="beheer-bevestiging" spacing="12" visible="false" managed="false">
-     <Label text="Wijzigingen opslaan?" styleClass="beheer-kop"/><Label fx:id="instellingenSamenvatting" wrapText="true"/>
-     <!-- Opslag wordt later aan de gegevenslaag gekoppeld. -->
-     <HBox spacing="8"><Button text="Bevestigen" disable="true" styleClass="beheer-primair"/><Button text="Annuleren" onAction="#annuleerInstellingen"/></HBox>
-    </VBox>
-    <Label fx:id="instellingenStatus" visible="false" managed="false" styleClass="beheer-succes"/>
-   </VBox>
+   <fx:include fx:id="instellingen" source="instellingen.fxml"/>
    <VBox styleClass="beheer-kaart" spacing="16">
     <Label text="Wijzigingen" styleClass="beheer-kop"/>
     <TableView fx:id="wijzigingenTabel" prefHeight="190" fixedCellSize="48">

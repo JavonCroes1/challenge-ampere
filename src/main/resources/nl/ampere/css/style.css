@@ -50,17 +50,35 @@
 /* ===== Dashboard (Billy) ===== */
 /* De knop van het scherm dat nu open is */
 
-.container{
+.dashboard{
     -fx-padding: 10px;
     -fx-border-radius: 4px;
 }
 
 .statusBar .label {
-    -fx-text-fill: white;
+    -fx-text-fill: #000000;
+}
+
+.usage-value{
+    -fx-font-size: 28px;
+    -fx-text-fill: #000000;
+}
+
+.dashboard-title {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
+.status-code {
+    -fx-padding: 10px;
+    -fx-background-radius: 50px;
+    -fx-background-color: #e3f3e8;
+    -fx-font-weight: bold;
 }
 
 .statusBar{
-    -fx-background-color: #121212;
+    -fx-background-color: #ffffff;
     -fx-background-radius: 12;
     -fx-padding: 10px;
 }

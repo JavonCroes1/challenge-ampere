@@ -1,57 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
 <StackPane fx:id="chart" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ampere.controller.DashboardController">
-    <VBox prefHeight="1205.0" prefWidth="1290.0" spacing="15" styleClass="container">
-        <Label alignment="CENTER" styleClass="dashboard-title" text="Dashboard (Billy)" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP">
-            <font>
-                <Font name="System Bold" size="24.0" />
-            </font>
-        </Label>
+    <VBox prefHeight="526.0" prefWidth="926.0" spacing="15" styleClass="dashboard">
+        <Label alignment="CENTER" styleClass="dashboard-title" text="Dashboard (Billy)" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
 
         <VBox spacing="8" styleClass="statusBar">
-            <Label styleClass="status-title" text="Verbruik gebouw" />
+            <HBox>
+                <Label styleClass="status-title" text="Verbruik gebouw" />
+                <Region HBox.hgrow="ALWAYS" />
+                <VBox alignment="TOP_RIGHT">
+                    <Label styleClass="status-code" text="Normaal" />
+                    <Label styleClass="laatste-meting" text="Laatste meting 17:55 - simulatie" />
+                </VBox>
+            </HBox>
             <HBox alignment="CENTER_LEFT" spacing="5">
-                <Label fx:id="currentUsage" styleClass="usage-value" text="8,1 kW">
-                   <font>
-                      <Font name="System Bold" size="24.0" />
-                   </font>
-                </Label>
+                <Label fx:id="currentUsage" styleClass="usage-value" text="8,1 kW" />
                 <Label styleClass="usage-limit" text="/ 8,0 kW" />
             </HBox>
+                  
+            <GridPane hgap="0" vgap="0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="70.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="10.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="20.0" />
+                </columnConstraints>
 
-            <StackPane fx:id="statusBar" maxWidth="Infinity" prefHeight="14">
-                <HBox maxWidth="Infinity">
-                    <Region prefWidth="650" style="-fx-background-color: #35a56a;" HBox.hgrow="ALWAYS" />
-                    <Region prefWidth="100" style="-fx-background-color: #d58a32;" HBox.hgrow="ALWAYS" />
-                    <Region prefWidth="150" style="-fx-background-color: #ed7777;" HBox.hgrow="ALWAYS" />
-                </HBox>
-                <StackPane alignment="TOP_CENTER">
-                    <Separator orientation="VERTICAL" prefHeight="200.0" />
+                <rowConstraints>
+                    <RowConstraints minHeight="25.0" />
+                    <RowConstraints minHeight="25.0" />
+                </rowConstraints>
 
-                    <Label text="4.4 kW"
-                           translateY="-20"
-                           style="-fx-text-fill: white;" />
-                </StackPane>
-            </StackPane>
+                <Region maxWidth="Infinity" prefHeight="5" style="-fx-background-color: #35a56a;" />
+                <Region maxWidth="Infinity" prefHeight="5" style="-fx-background-color: #d58a32;" GridPane.columnIndex="1" />
+                <Region maxWidth="Infinity" prefHeight="5" style="-fx-background-color: #ed7777;" GridPane.columnIndex="2" />
 
-            <HBox alignment="CENTER" spacing="300">
-                <Pane prefHeight="25">
-                    <Label layoutX="0" layoutY="0" text="0 kW" />
-
-                    <Label layoutX="920" layoutY="0" text="Limiet 8,0 kW" />
-
-                    <Label layoutX="1200" layoutY="0" text="10 kW" />
-                </Pane>
-            </HBox>
+                <Label alignment="CENTER_RIGHT" maxWidth="Infinity" text="10 kW" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Label text="Limiet 8,0 kW" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="0 kW" GridPane.rowIndex="1" />
+            </GridPane>
         </VBox>
     </VBox>
 </StackPane>

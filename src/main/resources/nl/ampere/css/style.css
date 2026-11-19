@@ -51,12 +51,18 @@
 /* De knop van het scherm dat nu open is */
 
 .container{
-    -fx-padding: 5px;
+    -fx-padding: 10px;
     -fx-border-radius: 4px;
+}
+
+.statusBar .label {
+    -fx-text-fill: white;
 }
 
 .statusBar{
     -fx-background-color: #121212;
+    -fx-background-radius: 12;
+    -fx-padding: 10px;
 }
 /* ===== Beslissingen (Naoufal) ===== */
 

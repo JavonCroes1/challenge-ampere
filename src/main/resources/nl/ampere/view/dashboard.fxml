@@ -20,7 +20,7 @@
             </font>
         </Label>
 
-        <VBox spacing="8" styleClass="statusBar">
+        <VBox spacing="8" styleClass="statusBar" style="-fx-text-fill: white;">
             <Label styleClass="status-title" text="Verbruik gebouw" />
             <HBox alignment="CENTER_LEFT" spacing="5">
                 <Label fx:id="currentUsage" styleClass="usage-value" text="8,1 kW" />
@@ -28,7 +28,7 @@
             </HBox>
 
             <StackPane fx:id="statusBar" maxWidth="Infinity" prefHeight="14">
-                <HBox maxWidth="Infinity" spacing="0">
+                <HBox maxWidth="Infinity">
                     <Region prefWidth="650" style="-fx-background-color: #35a56a;" HBox.hgrow="ALWAYS" />
                     <Region prefWidth="100" style="-fx-background-color: #d58a32;" HBox.hgrow="ALWAYS" />
                     <Region prefWidth="150" style="-fx-background-color: #ed7777;" HBox.hgrow="ALWAYS" />

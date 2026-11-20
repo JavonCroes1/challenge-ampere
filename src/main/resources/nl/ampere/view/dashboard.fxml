@@ -14,17 +14,23 @@
         <Label alignment="CENTER" styleClass="dashboard-title" text="Dashboard (Billy)" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
 
         <VBox spacing="8" styleClass="statusBar">
-            <HBox>
-                <Label styleClass="status-title" text="Verbruik gebouw" />
-                <Region HBox.hgrow="ALWAYS" />
-                <VBox alignment="TOP_RIGHT">
-                    <Label styleClass="status-code" text="Normaal" />
-                    <Label styleClass="laatste-meting" text="Laatste meting 17:55 - simulatie" />
+            <HBox styleClass="upperBar-text">
+                <VBox alignment="TOP_LEFT" spacing="5">
+                    <Label styleClass="status-title" text="Verbruik gebouw" />
+
+                    <HBox alignment="BASELINE_LEFT" spacing="5">
+                        <Label fx:id="currentUsage" styleClass="usage-value" text="6,9 kW" />
+
+                        <Label styleClass="usage-limit" text="/ 8,0 kW" />
+                    </HBox>
                 </VBox>
-            </HBox>
-            <HBox alignment="CENTER_LEFT" spacing="5">
-                <Label fx:id="currentUsage" styleClass="usage-value" text="8,1 kW" />
-                <Label styleClass="usage-limit" text="/ 8,0 kW" />
+
+                <Region HBox.hgrow="ALWAYS" />
+
+                <VBox alignment="CENTER_RIGHT">
+                    <Label styleClass="status-code" text="Normaal" />
+                    <Label styleClass="laatste-meting" text="Laatste meting 18:14 - simulatie" />
+                </VBox>
             </HBox>
                   
             <GridPane hgap="0" vgap="0">
@@ -44,7 +50,7 @@
                 <Region maxWidth="Infinity" prefHeight="5" style="-fx-background-color: #ed7777;" GridPane.columnIndex="2" />
 
                 <Label alignment="CENTER_RIGHT" maxWidth="Infinity" text="10 kW" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                <Label text="Limiet 8,0 kW" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                <Label text="Limiet 8,0 kW" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
                 <Label text="0 kW" GridPane.rowIndex="1" />
             </GridPane>
         </VBox>

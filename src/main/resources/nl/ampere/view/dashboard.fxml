@@ -1,9 +1,58 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
 
-<StackPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-           fx:controller="nl.ampere.controller.DashboardController">
-    <Label text="Dashboard (Billy)"/>
+<StackPane fx:id="chart" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ampere.controller.DashboardController">
+    <VBox prefHeight="526.0" prefWidth="926.0" spacing="15" styleClass="dashboard">
+        <Label alignment="CENTER" styleClass="dashboard-title" text="Dashboard (Billy)" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
+
+        <VBox spacing="8" styleClass="statusBar">
+            <HBox styleClass="upperBar-text">
+                <VBox alignment="TOP_LEFT" spacing="5">
+                    <Label styleClass="status-title" text="Verbruik gebouw" />
+
+                    <HBox alignment="BASELINE_LEFT" spacing="5">
+                        <Label fx:id="currentUsage" styleClass="usage-value" text="6,9 kW" />
+
+                        <Label styleClass="usage-limit" text="/ 8,0 kW" />
+                    </HBox>
+                </VBox>
+
+                <Region HBox.hgrow="ALWAYS" />
+
+                <VBox alignment="CENTER_RIGHT">
+                    <Label styleClass="status-code" text="Normaal" />
+                    <Label styleClass="laatste-meting" text="Laatste meting 18:14 - simulatie" />
+                </VBox>
+            </HBox>
+                  
+            <GridPane hgap="0" vgap="0">
+                <columnConstraints>
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="70.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="10.0" />
+                    <ColumnConstraints hgrow="SOMETIMES" percentWidth="20.0" />
+                </columnConstraints>
+
+                <rowConstraints>
+                    <RowConstraints minHeight="25.0" />
+                    <RowConstraints minHeight="25.0" />
+                </rowConstraints>
+
+                <Region maxWidth="Infinity" prefHeight="5" style="-fx-background-color: #35a56a;" />
+                <Region maxWidth="Infinity" prefHeight="5" style="-fx-background-color: #d58a32;" GridPane.columnIndex="1" />
+                <Region maxWidth="Infinity" prefHeight="5" style="-fx-background-color: #ed7777;" GridPane.columnIndex="2" />
+
+                <Label alignment="CENTER_RIGHT" maxWidth="Infinity" text="10 kW" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                <Label text="Limiet 8,0 kW" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <Label text="0 kW" GridPane.rowIndex="1" />
+            </GridPane>
+        </VBox>
+    </VBox>
 </StackPane>

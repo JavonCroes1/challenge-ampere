@@ -5,9 +5,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<VBox spacing="20" styleClass="beslissingen"
-      xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="nl.ampere.controller.BeslissingenController">
+<VBox spacing="20" styleClass="beslissingen" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="nl.ampere.controller.BeslissingenController">
 
     <Label styleClass="titel" text="Beslissingen" />
 

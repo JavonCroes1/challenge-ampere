@@ -52,6 +52,47 @@
 
 /* ===== Beslissingen (Naoufal) ===== */
 
+/* het hele scherm: ruimte rondom */
+.beslissingen {
+    -fx-padding: 24 64;
+}
+
+/* titel "Beslissingen" */
+.beslissingen .titel {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* witte kaart */
+.beslissingen .kaart {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 8;
+    -fx-border-color: #d9dce1;
+    -fx-border-radius: 8;
+    -fx-padding: 20;
+}
+
+/* rand om de knoppen Pauzes en Voorrang */
+.beslissingen .tabknoppen {
+    -fx-border-color: #b8bdc6;
+    -fx-border-radius: 6;
+    -fx-padding: 1;
+}
+
+/* de knoppen zelf */
+.beslissingen .tabknoppen .button {
+    -fx-background-color: transparent;
+    -fx-pref-height: 38;
+    -fx-padding: 0 14;
+}
+
+/* de gekozen knop is blauw */
+.beslissingen .tabknoppen .button.actief {
+    -fx-background-color: #2f5fd0;
+    -fx-background-radius: 5;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
 
 /* ===== Beheer (Melik) ===== */
 

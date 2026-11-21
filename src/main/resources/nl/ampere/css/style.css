@@ -94,6 +94,27 @@
     -fx-font-weight: bold;
 }
 
+/* de woorden Datum en Apparaat boven de velden */
+.beslissingen .veldnaam {
+    -fx-font-weight: bold;
+}
+
+/* datumveld en keuzelijst: wit met grijze rand */
+.beslissingen .text-field,
+.beslissingen .combo-box {
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 6;
+    -fx-border-color: #b8bdc6;
+    -fx-border-radius: 6;
+    -fx-pref-height: 40;
+}
+
+/* "2 pauzes" rechts in grijs */
+.beslissingen .aantal {
+    -fx-text-fill: #5b6270;
+    -fx-min-height: 40;
+}
+
 /* ===== Beheer (Melik) ===== */
 
 

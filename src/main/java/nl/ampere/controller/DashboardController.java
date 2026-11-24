@@ -42,11 +42,15 @@ public class DashboardController {
         XYChart.Series<Number, Number> series = new XYChart.Series<>();
         series.setName("Energieverbruik");
         series.getData().add(new XYChart.Data<>(16.0, 2));
-        series.getData().add(new XYChart.Data<>(16.5, 2));
-        series.getData().add(new XYChart.Data<>(17.0, 4));
-        series.getData().add(new XYChart.Data<>(17.5, 5));
-        series.getData().add(new XYChart.Data<>(18.0, 3));
-        series.getData().add(new XYChart.Data<>(18.5, 3));
+        series.getData().add(new XYChart.Data<>(16.3, 2));
+        series.getData().add(new XYChart.Data<>(16.5, 2.7));
+        series.getData().add(new XYChart.Data<>(17.0, 3.8));
+        series.getData().add(new XYChart.Data<>(17.3, 3.8));
+        series.getData().add(new XYChart.Data<>(17.5, 4.3));
+        series.getData().add(new XYChart.Data<>(18.0, 3.4));
+        series.getData().add(new XYChart.Data<>(18.2, 1.8));
+        series.getData().add(new XYChart.Data<>(18.3, 10.2));
+        series.getData().add(new XYChart.Data<>(18.5, 3.5));
 
         XYChart.Series<Number, Number> limiet = new XYChart.Series<>();
         limiet.setName("Limiet");

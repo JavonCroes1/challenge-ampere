@@ -55,6 +55,40 @@
     -fx-border-radius: 4px;
 }
 
+.chart-series-line.series1 {
+    -fx-stroke: red;
+    -fx-stroke-width: 2.5px;
+}
+
+.chart-series-line.series1 {
+    -fx-background-color: red;
+}
+
+.series1.chart-line-symbol {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-shape: "";
+}
+
+.chart-series-line.series0 {
+    -fx-stroke: #257cf8;
+    -fx-stroke-width: 2.5px;
+}
+
+.chart-series-line.series0 {
+    -fx-background-color: #257cf8;
+}
+
+.series0.chart-line-symbol {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-shape: "";
+}
+
 .statusBar .label {
     -fx-text-fill: #000000;
 }

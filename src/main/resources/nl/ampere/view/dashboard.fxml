@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<StackPane fx:id="chart" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ampere.controller.DashboardController">
+<StackPane fx:id="chart" stylesheets="@../css/style.css" xmlns:fx="http://javafx.com/fxml/1" fx:controller="nl.ampere.controller.DashboardController">
     <VBox prefHeight="526.0" prefWidth="926.0" spacing="15" styleClass="dashboard">
         <Label alignment="CENTER" styleClass="dashboard-title" text="Dashboard (Billy)" textAlignment="CENTER" textFill="WHITE" textOverrun="CLIP" />
 

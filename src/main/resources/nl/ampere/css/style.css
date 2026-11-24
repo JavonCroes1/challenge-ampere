@@ -55,6 +55,74 @@
     -fx-border-radius: 4px;
 }
 
+.button-container {
+    -fx-border-color: #b8bdc6;
+    -fx-border-radius: 6;
+    -fx-padding: 1;
+}
+
+.button.laatste-2uur{
+    -fx-background-color: #335fcf;
+    -fx-padding: 8;
+    -fx-text-fill: #ffffff;
+    -fx-font-weight: bold;
+}
+
+.legenda{
+    -fx-padding: 0 15 0 0;
+}
+
+.kW-value-title{
+    -fx-padding: 0 0 0 15;
+}
+
+.line-limit{
+    -fx-padding: 8;
+    -fx-text-fill: #ff0000;
+    -fx-font-weight: bold;
+}
+
+.button.hele-dag{
+    -fx-background-color: #ffffff;
+    -fx-padding: 8;
+    -fx-text-fill: #000000;
+}
+
+.chart-series-line.series1 {
+    -fx-stroke: red;
+    -fx-stroke-width: 2.5px;
+    -fx-stroke-dash-array: 22;
+}
+
+.chart-series-line.series1 {
+    -fx-background-color: red;
+}
+
+.series1.chart-line-symbol {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-shape: "";
+}
+
+.chart-series-line.series0 {
+    -fx-stroke: #257cf8;
+    -fx-stroke-width: 2.5px;
+}
+
+.chart-series-line.series0 {
+    -fx-background-color: #257cf8;
+}
+
+.series0.chart-line-symbol {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+    -fx-shape: "";
+}
+
 .statusBar .label {
     -fx-text-fill: #000000;
 }
@@ -70,6 +138,11 @@
     -fx-text-fill: #000000;
 }
 
+.graph-title{
+    -fx-font-weight: bold;
+    -fx-text-fill: #000000;
+}
+
 .status-code {
     -fx-padding: 10px;
     -fx-background-radius: 50px;
@@ -77,7 +150,7 @@
     -fx-font-weight: bold;
 }
 
-.statusBar{
+.statusBar, .graph{
     -fx-background-color: #ffffff;
     -fx-background-radius: 12;
     -fx-padding: 10px;
